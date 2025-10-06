@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Toy Haven</title>
+</head>
+
+<body>
+    <header id="header">
+        <div class="logo">
+            <img id="header-img" src="https://cdn-icons-png.flaticon.com/512/3144/3144456.png" alt="Toy Haven Logo"
+                loading="lazy" />
+        </div>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#pricing" class="nav-link">Toys</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Fun & Safe Toys for Every Kid</h2>
+        <form method="POST" action="/" id="form">
+            <input type="email" name="email" id="email" placeholder="Enter your Email address" required />
+            <input type="submit" id="submit" value="Subscribe Now" class="btn" />
+        </form>
+    </section>
+    <div class="floating-toys">
+        <i class="fas fa-puzzle-piece toy"></i>
+        <i class="fas fa-dice toy"></i>
+        <i class="fas fa-star toy"></i>
+        <i class="fas fa-robot toy"></i>
+        <i class="fas fa-cube toy"></i>
+    </div>
+
+    <section id="features" class="container">
+        <div class="grid">
+            <div class="icon"><i class="fa fa-3x fa-puzzle-piece"></i></div>
+            <div class="desc">
+                <h2>Educational Toys</h2>
+                <p>Our toys are designed to help children learn while having fun, fostering creativity and critical
+                    thinking.</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="icon"><i class="fa fa-3x fa-shipping-fast"></i></div>
+            <div class="desc">
+                <h2>Fast Delivery</h2>
+                <p>We deliver your orders quickly and securely, making sure every toy arrives in perfect condition.</p>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="icon"><i class="fa fa-3x fa-star"></i></div>
+            <div class="desc">
+                <h2>Top Quality</h2>
+                <p>All toys are thoroughly tested for safety and quality so your kids can enjoy endless fun worry-free.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works">
+        <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" frameborder="0"
+            allowfullscreen></iframe>
+    </section>
+
+    <section id="pricing">
+        <div class="product" id="lego">
+            <div class="level">LEGO Set</div>
+            <h2>$50</h2>
+            <ol>
+                <li>Creative building fun</li>
+                <li>Over 300 pieces</li>
+                <li>For ages 7+</li>
+                <li>Durable & safe</li>
+            </ol>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="product" id="doll">
+            <div class="level">Doll Set</div>
+            <h2>$35</h2>
+            <ol>
+                <li>Soft & cuddly</li>
+                <li>Colorful outfits</li>
+                <li>For ages 3+</li>
+                <li>Washable & safe</li>
+            </ol>
+            <button class="btn">Buy Now</button>
+        </div>
+        <div class="product" id="puzzle">
+            <div class="level">Puzzle Game</div>
+            <h2>$25</h2>
+            <ol>
+                <li>Challenging & fun</li>
+                <li>500 pieces</li>
+                <li>Educational & engaging</li>
+                <li>Durable cardboard</li>
+            </ol>
+            <button class="btn">Buy Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <span>© 2025 Toy Haven</span>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
