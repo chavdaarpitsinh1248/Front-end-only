@@ -1,0 +1,289 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 1s ease;
+    /* Smooth transition */
+}
+
+body.clear {
+    background: linear-gradient(to bottom, #fceabb, #f8b500);
+    /* sunny */
+}
+
+body.clouds {
+    background: linear-gradient(to bottom, #d7dae2, #8a9ba8);
+    /* cloudy */
+}
+
+body.rain {
+    background: linear-gradient(to bottom, #4e5d6c, #2c3e50);
+    /* rainy */
+}
+
+body.snow {
+    background: linear-gradient(to bottom, #e6f0ff, #a3c4f3);
+    /* snowy */
+}
+
+body.thunderstorm {
+    background: linear-gradient(to bottom, #4b4b4b, #1f1f1f);
+    /* stormy */
+}
+
+body.mist,
+body.fog {
+    background: linear-gradient(to bottom, #a0a0a0, #6e6e6e);
+    /* foggy/misty */
+}
+
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+header h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.search input {
+    padding: 10px;
+    width: 70%;
+    border: 2px solid #ddd;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 8px 8px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #357ab7;
+}
+
+.weather-card {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather-card h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.weather-card p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 16px;
+}
+
+.unit-toggle {
+    margin-top: 15px;
+}
+
+.unit-toggle button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #ff9800;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.unit-toggle button:hover {
+    background-color: #e68900;
+}
+
+/* Icon container */
+.icon-container {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+}
+
+/* Rotate animation for sun */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sunny {
+    animation: rotate 20s linear infinite;
+}
+
+/* Float animation for clouds */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.cloudy {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Shake animation for rain */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.rainy {
+    animation: shake 0.5s linear infinite;
+}
+
+body.day {
+    color: #333;
+    /* dark text for day */
+}
+
+body.night {
+    color: #f0f0f0;
+    /* light text for night */
+}
+
+/* Optional: slightly darker backgrounds for night */
+body.night.clear {
+    background: linear-gradient(to bottom, #0f2027, #2c5364);
+    /* night clear sky */
+}
+
+body.night.clouds {
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    /* night clouds */
+}
+
+body.night.rain {
+    background: linear-gradient(to bottom, #1b2735, #090a0f);
+    /* night rain */
+}
+
+.search button:hover {
+    transform: scale(1.05);
+}
+
+.icon-container {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.weather-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#temperature {
+    transition: all 0.5s ease;
+}
+
+#cityInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+.search button {
+    letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .weather-card img {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+body.clear {
+    background: linear-gradient(-45deg, #fceabb, #f8b500, #fceabb, #f8b500);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
